@@ -30,7 +30,7 @@ client.on('message', async (msg) => { // Menjalankan fungsi ini secara asinkron 
             let ditemukan = false; // Menyiapkan variabel penanda 'ditemukan' dengan status awal salah (false)
             
             worksheet.eachRow((row, rowNumber) => { // Melakukan perulangan otomatis untuk mengecek baris demi baris di dalam file Excel
-                if (rowNumber > 1) { // Mengabaikan baris ke-1 karena baris ke-1 adalah judul kolom (Keyword, Kategori, IsiPesan), kita mulai dari baris 2
+                if (rowNumber > 1) { // Mengabaikan baris ke-1 karena baris ke-1 adalah judul kolom (Keyword, Pesan), kita mulai dari baris 2
                     const keywordExcel = row.getCell(1).value; // Mengambil nilai dari kotak/sel di kolom ke-1 (kolom Keyword) pada baris saat ini
                     const isiPesanExcel = row.getCell(2).value; // Mengambil nilai dari kotak/sel di kolom ke-2 (kolom Pesan) pada baris saat ini
                     
